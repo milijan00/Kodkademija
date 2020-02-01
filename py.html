@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="sr-Latn-RS">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Aleksandar Milijanović"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="keywords" content="kod, metoda, funkcija, naredba, promenljiva"/>
+    <meta name="description" content="Ovaj sajt namenjen je korisnicima koji žele naučiti osnove programiranja iz programskih jezika C, C++ i Python."/>
+    <meta name="copyright"  content="Kodkademija @ 2019"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="css/master.css"/>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <title>Programski jezik Python  - KodKademija</title>
+  </head>
+  <body>
+      <header>
+        <div id="header-fixed">
+          <div id="Logo">
+            <a href="index.html" title="Početna"><img src="img/logo3.png" alt="Logo"/></a>
+          </div>
+          <div id="meni">
+            <ul>
+              <li>
+                <span class="fas fa-home"></span>
+                <a href="index.html">Početna</a></li>
+              <li><a href="c.html">C</a></li>
+              <li><a href="cpp.html">C++</a></li>
+              <li class="aktivan-link"><a href="py.html">Python</a></li>
+              <li class="podmeniLink"><a href="#">Primeri</a>
+                <span class="fas fa-arrow-down"></span>
+                  <ul id="podmeni">
+                    <li><a  href="login.html">C</a></li>
+                    <li><a  href="login.html">C++</a></li>
+                    <li><a  href="login.html">Python</a></li>
+                  </ul>
+              </li>
+              <li><a href="registracija.html">Registracija</a></li>
+              <li>
+                <span class="fas fa-user"></span>
+                <a href="onama.html">O nama</a></li>
+              <li>
+                <span class="fas fa-phone-square"></span>
+                <a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="cleaner"></div>
+        </div>
+      </header>
+      <main id="sadrzaj" >
+        <!-- <div id="login">
+        JEDAN LINK STILIZOVAN KAO TAS
+        </div> -->
+        <div id="sadrzajMeni">
+            <ul>
+              <li><a href="#opste">Opšte</a></li>
+              <li><a href="#najjednostavnijiProgram">Najjednostavniji program</a></li>
+              <li><a href="#standardniunosispis" >Standardni unos/ispis</a></li>
+              <li><a href="#komentari" >Komentari</a></li>
+              <li><a href="#tipoviPodataka" >Tipovi podataka</a></li>
+              <li><a href="#promenljive" >Promenljive</a></li>
+              <li><a href="#operatori" >Operatori</a></li>
+              <li><a href="#uslovi" >Uslovi</a></li>
+              <li><a href="#petlje" >Petlje</a></li>
+              <li><a href="#liste" >Liste</a></li>
+              <li><a href="#uredjeniparovi" >Uređeni parovi</a></li>
+              <li><a href="#recnici" >Rečnici</a></li>
+              <li><a href="#funkcije" >Funkcije</a></li>
+              <li><a href="#klase" >Klase</a></li>
+              <li><a href="#radsadatotekama" >Rad sa datotekama</a></li>
+            </ul>
+        </div>
+        <div id="sadrzajDesno">
+          <div class="oblast">
+            <h1 ><a name="opste">Opšte</a></h1>
+            <p>Programski jezik Python nastao je 1991. godine.Kreirao ga se Guido van Rossun. Lako se uči, jer je kod napisan u njemu veoma čitljiv.Ima široku primenu.Koristi se za kreiranje desktop aplikacija, video igrica, veštačkoj inteligenciji i web-u. </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="najjednostavnijiProgram">Najjednostavniji program</a></h1>
+            <p>Prilikom usvajanja novih znanja iz programskih jezika najbolje je početi od najjednostanijeg programa koji se u njemu može napisati.Na osnovu tog primera se može sagledati sintaksa jezika.
+              Kod takvog programa možete videti ispod.
+            </p>
+            <div class="kod">
+              <code>
+                print("Zdravo!")
+              </code>
+            </div>
+            <p>
+              U poređenju sa ostalim jezicima, poput C ili C++, Python ima kraću sintaksu što olakšava pisanje koda.Naime u ovom programu jedina naredba koja nam je neophodna jeste naredba print.Primetiće te da nije potrebno uključivanje bilo kakvih metoda, iz razloga što je to Python to već učinio za nas.
+            </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="standardniunosispis">Standardni unos/ipis</a></h1>
+            <p>
+              Standardni unos podrazumeva unos podataka preko tastature, dok ispis predstavlja prikaz podataka na ekranu monitora.Koristićemo dve metode printf(*args) i input(*args).
+              Primena navedenih metoda je prikazana ispod.
+            </p>
+            <div class="kod">
+              <code>
+                broj = input("Unesite ceo broj:") <br/>
+                print(broj)<br/>
+              </code>
+            </div>
+            <p>
+              U ovom primeru kod je donekle sličan onom prethodnom u lekciji <a href="#najjednostavnijiProgram">NAJJEDNOSTAVNIJI PROGRAM</a>.Međutim postoje određene novine.Ono što je novo jeste naredba "broj=input("Unesite ceo broj")" koja označava deklaraciju promenljive, određenog memorijskog prostora sa čijim podacima možemo manipulisati, ali i pozivanje funkcije input za standardni unos podataka.
+              O deklaracijji će više biti reči u lekciji <a href="#promenljive">PROMENLjIVE</a>.Argument input funkcije jeste string, odnosno poruka koja sugeriše krajnjem korisniku šta bi trenao uneti.
+              Na kraju imamo ispis unete  vrednosti, kao provera za dobar unos. Ovog puta koristimo instrukciju print u kojoj argument jeste podatak koji se ispisuje na ekran.
+             </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="komentari">Komentari</a></h1>
+            <p>
+              Komentari se koriste kao posebne naznake u kodu koje su namenjene isključivo programerima.Oni nikako ne utiču na kod koliko god da ih ima, već služe kao podsetnik ili se preko njih lakše objašnjava deo koda.<br/>
+              Postoje jednoredni komentari koji se označavaju sa # i nakon njih ceo red jeste komentiran, ali ne i deo koda ispred nega.Takođe postoje i više redni komentari kod kojih se početak komentara označava sa tri ' , a kraj sa takođe '.
+            </p>
+            <div class="kod">
+              <code>
+                # jednoredni komentar<br/>
+                '''
+                viseredni<br/>
+                  komentar <br/>
+
+                '''
+              </code>
+            </div>
+          </div>
+          <!-- NUZNA JE DORADA  -->
+          <div class="oblast">
+            <h1 ><a name="tipoviPodataka">Tipovi podataka</a></h1>
+            <div class="centriraj tabela">
+              <table>
+                <tbody>
+                <tr>
+                  <th>Tip</th>
+                  <th>Objašnjenje</th>
+                </tr>
+                <tr>
+                  <td>string</td>
+                  <td>Podatak ovog tipa predstavlja skup karaktera</td>
+                </tr>
+                <tr>
+                  <td>int</td>
+                  <td>Najjednostavniji oboznačni, celobrojni tip koji sadrži vrednosti u opsegu &lsqb;−32,767, +32,767&rsqb;</td>
+                </tr>
+                <tr>
+                  <td>float</td>
+                  <td>Tip podatka koji predstavlja realan broj, smatra se tipom  jednostruke preciznosti</td>
+                </tr>
+                <tr>
+                  <td>bool</td>
+                  <td>Tip čija se vrednost najčešće koristi u uslovima; ima vrednost ili True ili False</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="promenljive">Promenljive</a></h1>
+            <p>
+              Promenljive predstavljaju ništa drugo do jednu memorijsku lokaciju u računaru u kojoj se nalaze podaci sa kojima manipulišemo shodno našim potrebama.
+              Deklaracija promenljive sa sastoji iz više koraka:
+              </p>
+              <ol>
+                <li><p>moramo napisati ime promenljive koje ćemo koristiti dalje u kodu</p></li>
+                <li><p>moramo napisati početnu vrednost (opcionalno)</p></li>
+              </ol>
+              <span>tim promenljive raspoznaje compiler na osnovu dodeljene vrednosti</span>
+            <div class="kod">
+              <code>
+                  # ime = vrednost;<br/>
+                   ceoBroj = 0<br/>
+                   realanBroj = 1.0<br/>
+                   rec = "Aleksandar"<br/>
+              </code>
+            </div>
+            <p>Ono što je važno naglasiti jeste da promenljiva mora imati nekakvu vrednost pre nego što se koristi u kalkulacijama.Posebna oznaka char* jeste za tip podatka string koji predstavlja skup karaktera.</p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="operatori">Operatori</a></h1>
+            <div class="centriraj tabela">
+              <table>
+                <tbody>
+                <tr>
+                  <th>Tip</th>
+                  <th>Operator</th>
+                </tr>
+                <tr>
+                  <td rowspan="5">Aritmetički operatori</td>
+                  <td>+</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>*</td>
+                </tr>
+                <tr>
+                  <td>=</td>
+                </tr>
+                <tr>
+                  <td>%</td>
+                </tr>
+                <tr>
+                  <td rowspan="4">Komparacioni operatori</td>
+                  <td>&gt;</td>
+                </tr>
+                <tr>
+                  <td>=&gt;</td>
+                </tr>
+                <tr>
+                  <td>&lt;=</td>
+                </tr>
+                <tr>
+                  <td>&lt;</td>
+                </tr>
+                <tr>
+                  <td rowspan="5">Specijalni operatori</td>
+                  <td>+=</td>
+                </tr>
+                <tr>
+                  <td>-=</td>
+                </tr>
+                <tr>
+                  <td>*=</td>
+                </tr>
+                <tr>
+                  <td>/=</td>
+                </tr>
+                <tr>
+                  <td>%=</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="uslovi">Uslovi</a></h1>
+            <p>
+              Uslovi jesu vid dodavanja logike u naš program putem određenih uslova koje odredi programer.U Python-u postoje tri ključne reči koje se koriste prilikom kreiranja uslova.
+              One su:
+              </p>
+              <ol>
+                <li><p>IF</p></li>
+                <li><p>ELIF</p></li>
+                <li><p>ELSE</p></li>
+              </ol>
+              <p>IF se koristi uvek za početak grananja uslova, dok se ELIF koristi za uslove između i ELSE se korsti za poslednji uslov s tim što se uslov ne navodi za njega.<br/>
+                Uslov ima sledeću sintaksu: &nbsp;if uslov:telo uslova.<br/>Telo uslova naznačava se parom : nakon čega taj blok koda mora biti uvučen. Kod unutar tela uslova se izvršava samo ukoliko je uslov tačan, ukoliko nije onda se preskače.
+              </p>
+            <div class="kod">
+              <code>
+                broj = input("Unesite broj:") <br/>
+                if broj < 50 :<br/>
+                    &nbsp;&nbsp;print("Vas broj je manji od 50")<br/>
+                elif broj < 100:<br/>
+                    &nbsp;&nbsp;print("Vas broj je manji od 100")<br/>
+                else:<br/>
+                    &nbsp;&nbsp;print("Vas broj je veci od 100")<br/>
+              </code>
+            </div>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="petlje">Petlje</a></h1>
+            <p>
+              Kroz petlje možemo jedan blok koda izvršiti nekoliko puta u zavisnosti koliko nam je potrebno.Taj broj izvršavanja ili iteracija, može biti određen od strane programera mada broj iteracija može biti različit prilikom izvršavanja jednog istog programa u zavisnosti od vrednosti unetih od strane korisnika.
+              Postoje tri vrste petlji:
+              </p>
+              <ol>
+                <li><p>While</p></li>
+                <li><p>For</p></li>
+                <li><p>Foreach</p></li>
+              </ol>
+              <p>While jeste ona kod koje broj iteracija ne zavisi od vrednosti koje programer unese.Ona se kreira pisanjem ključne reči while i pisanjem uslova i tela same petlje <br/>
+                Telo uslova je ograđeno :, ispod koje  se nalazi kod koji se treba izvršiti nakon tačnosti uslova.Rezultat koji će biti prikazan zavisi od unete vrednosti koja se poredi.<br/>
+                  Prvo ćemo prikazati preimer sa petljom while:
+                 </p>
+            <div class="kod">
+              <code>
+                broj = 0 <br/>
+                while(broj % 2 == 0):<br/>
+                  &nbsp;&nbsp;broj = input("Unesite paran broj")
+              </code>
+            </div>
+            <p>Operand % naziva se modul i kao rezultat takve operacije jeste ostatak prilikom deljenja deljenika i delioca.Ova petlja nema definisan broj iteracija i samim tim taj broj zavisi od tačnosti uslova koji je definisan.
+              Od trenutka kada uslov postane netačan petlja se prekida automatski.<br/>
+              Sledi primer for petlje:
+            </p>
+            <div class="kod">
+              <code>
+                broj = input("Unesite broj:")<br/>
+                for i in range(broj):<br/>
+                  &nbsp;&nbsp;print(str(i+1) + ". iteracija")
+              </code>
+            </div>
+            <p>Ovakva petlja će imati određen broj iteracija zbog  upotrebe funkcije range().Nakon svake iteracije proverava se da li je i u opsegu ,range, između 0 i navedenog broja.<br/>
+              Sledi primer foreach petlje:
+            </p>
+            <div class="kod">
+              <code>
+                imena = ["Branko", "Marko", "Lazar"]<br/>
+                for ime in imena:<br/>
+                    &nbsp;&nbsp;print(ime)<br/>
+              </code>
+            </div>
+            <p>Foreach petlja je specifična u poređenju sa ostalima, zbog toga što kod nje nemamo definisan broj iteracija već postoji promenljiva koja u svakoj iteraciji ima vrednost onog elementa čija je iteracija jednaka poziciji u listi.Ovakva petlja se koristi isključivo za liste.</p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="liste">Liste</a></h1>
+            <p>
+              Liste jesu posebna vrsta promenljivih koja sadrži dve ili više vrednosti koje se međusobno povezane tj. odnose se na isti pojam.
+              Sadrže sve tipove baš kao i obične promenljive, ali niz može sadržati vrednosti istog tipa koji je naveden u deklaraciji.
+              Deklaracija liste se svodi na sledeće:<br/>
+               naziv&nbsp;= &lsqb;&rsqb;;<br/>
+               Pri čemu je ovo deklaracija prazne liste.Prilikom deklaracije nije potrebno navesti broj elemenata jer je lista fleksibilna po tom pitanju.Elementi se mogu brisati i dodavati u bilo kom trenutku.
+              </p>
+            <div class="kod">
+              <code>
+                imena = [] <br/>
+                for i in range(5):<br/>
+                    &nbsp;&nbsp;ime = input("Unesite ime:")<br/>
+                    &nbsp;&nbsp;imena.append(ime) <br/>
+                imena.remove(vrednostElementaKojiSeBrise)<br/>
+                imena.clear()#brisanje svih elemenata<br/>
+              </code>
+            </div>
+            <p>Način na koji se vrednosti unose u listu jeste preko metode append.
+              Ono što je takođe važno napomenuti jeste da metoda za brisanje jednog elementa jeste remove, dok se svi elementi brišu uz pomoć clear metode
+              Ispod je prikazana tabela sa indeksiranjem elemenata u listi i njihovim pozicijama u istoj.
+            </p>
+          <div class="centriraj tabela">
+            <table>
+            <tbody>
+              <tr>
+                <th>INDEX</th>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>...</td>
+                <td>n-1</td>
+              </tr>
+              <tr>
+                <th>POZICIJA</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>...</td>
+                <td>n</td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="uredjeniparovi">Uređeni parovi</a></h1>
+            <p>
+              Uređeni par jeste još jedan specifičan tip koji, za razliku od liste, zauzima manji memorijski prostor  i nije fleksibilan u pogledu na promenu broja elemenata, u smislu da jednom deklarisan par ne može biti promenjen.
+              Deklaracija sledi:<br/>
+               naziv&nbsp;= ();<br/>
+               Pri čemu je ovo deklaracija praznog uređenog para.Prilikom deklaracije je  potrebno navesti elemente koji mogu biti drugačijeg tipa.
+              </p>
+            <div class="kod">
+              <code>
+                font = ("Times New Roman",  12) <br/>
+                print(font[0], font[1])
+              </code>
+            </div>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="recnici">Rečnici</a></h1>
+            <p>
+              Rečnik  jeste  jedan specifičan tip koji se sastoji od parova dve vrednosti, klju zauzima manji memorijski prostor  i nije fleksibilan u pogledu na promenu broja elemenata, u smislu da jednom deklarisan par ne može biti promenjen.
+              Rečnik se deklariše na sledeći način:<br/>
+               naziv&nbsp;= {kljuc: vrednost};<br/>
+               Pri čemu je ključ napisan u stringu, dok vrednost može predstavljati bilo kakav podatak sa bilo kakvim tipom.
+              </p>
+            <div class="kod">
+              <code>
+                osoba = {"ime": "Aleksandar", "prez": "Petrovic", "starost", 19} <br/>
+                osoba["novi_kljuc"] = "nova vrednost" <br/>
+                print(osoba["ime"], osoba["prez"], osoba["starost"])<br/>
+              </code>
+            </div>
+            <p>Potrebno je znati da je moguće dodavanje novog ključa a samim tim i vrednosti jednostavnim zapisom tog novog ključa i nove vrednosti.Dok se pristupanje vrednosti vrši preko ključa.</p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="funkcije">Funkcije</a></h1>
+            <p>
+              Funkcija jeste podprogram koji se može izvršavati onoliko puta shodno potrebama programera.Potreba za pisanjem funkcija javlja se  u trenutku kada uočavamo ponavljanje koda, jer sama funkcija jeste vid skraćivanja pisanja koda.
+              I ukoliko je potrebna rezivija koda koji se ponavlja jedino meste gde se revizija čini jeste telo funkcije.<br/>
+              Deklaracija funkcije vrši se po sledećem šablonu:<br/>
+              nazivFunkcije(lista argumenata):->Tip funkcije<br/> &nbsp;&nbsp; telo funkcije
+              </p>
+            <div class="kod">
+              <code>
+                def vrati_jedan()->int: <br/>
+                    &nbsp;&nbsp;return 1<br/>
+                def stampaj_tekst(tekst)->None:<br/>
+                    &nbsp;&nbsp;print(tekst)<br/>
+                stampaj_tekst(vrati_jedan())<br/>
+              </code>
+            </div>
+            <p>
+              U Python-u deklaracija funkcije započnje sa ključnom rečju def, zatim sa nazivom same funkcije, listom argumenata i tipom same funkcije ispred koga stoji ->.Obavezno je svaku naredbu koja pripada funkcijci uvući!
+            </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="klase">Klase</a></h1>
+            <p>
+              Klasa jeste nestandardizovani tip koji može sadržati druge promenljive ali i funkcije, ali isto tako se može upotrebljavati kao bilo koji od standardizovanih tipova.
+              Ključna reč prilikom deklaracije strukture je class nakon čega se navodi ime klase i telo iste.
+              </p>
+            <div class="kod">
+              <code>
+                class Osoba:<br/>
+                  &nbsp;&nbsp;def __init__(self, ime:str, prez:str):<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;self.ime = ime<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;self.prez = prez<br/>
+                  &nbsp;&nbsp;def get_ime(self)->str:<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;return self.ime<br/>
+                  &nbsp;&nbsp;def set_ime(self, value: str)->None:<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;self.ime = value<br/>
+                  &nbsp;&nbsp;def set_prez(self, value: str)->None:<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;self.prez = value<br/>
+                  &nbsp;&nbsp;def get_prez(self)->str:<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;return self.prez<br/>
+                  &nbsp;&nbsp;def prikazi_rezultat( osoba:Osoba)->str:<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;return osoba.get_ime() + " " + osoba.get_prez()<br/>
+                osoba = Osoba('Pera', 'Peric')<br/>
+                print(prikazi_rezultat(osoba))<br/>
+                osoba.set_ime('Marko')<br/>
+                print(prikazi_rezultat(osoba))<br/>
+              </code>
+            </div>
+            <p>
+              Gore navedeni program kreira  objekat osoba klasu Osoba
+              koji sadrži promenljive ime, prezime i starost.Metodama, koje smo kreirali u okviru klase, unosimo podatke koji se naknadno prikazuju u određenom formatu.<br/>
+              Način na koji se pristupa svakoj promenljivi posebno kroz objekat strukture jeste preko " . " kao što je učinjeno iznad.
+            </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="radsadatotekama">Rad sa datotekama</a></h1>
+            <p>
+              Datoteke jesu jedan vid trajnog čuvanja, skladištenja, podataka i u Python-u postoje određene metode koje nam omogućavaju rad sa njima.
+              Metode kao što su:
+            </p>
+            <ol>
+              <li><p>open(*args) - uspostavlja povezanost sa datotekom, na osnovu argumenata kreira, čita ili dodaje u datoteku </p></li>
+              <li><p>close(*f) - zatvara datoteku na koju pokazuje f </p></li>
+              <li><p>write(*args)- dodavanje sadržaja u tekstualnu datoteku</p></li>
+              <li><p>read()- čitanje sadržaja iz datoteke </p></li>
+            </ol>
+            <p>U zavisnosti da li želimo kreirati, čitati ili dodati sadržaj trebamo dodati kao drugi argument metode open :</p>
+            <ol>
+              <li><p>w - kreiranje potpuno nove datoteke</p></li>
+              <li><p>r - čitanje sadržaja datoteke</p></li>
+              <li><p>a - dodavanje sadržaja u datoteku</p></li>
+              <li><p>r+ - kreiranje i čitanje sadržaja datoteke</p></li>
+            </ol>
+            <p>Kreiranje(W) i dodavanje sadržaja u novu datoteku:</p>
+            <div class="kod">
+              <code>
+                f = open('fajl.txt', 'w')<br/>
+                write("Podatak")<br/>
+                f.close() <br/>
+              </code>
+            </div>
+            <p>Čitanje(r) sadržaja  datoteke:</p>
+            <div class="kod">
+              <code>
+                f = open('fajl.txt', 'r') <br/>
+                data = f.read()<br/>
+                print(data)<br/>
+                f.close()<br/>
+              </code>
+            </div>
+             <p>Dodavanje(a) sadržaja u datoteku, ali ne brisati već postojeći se obavlja preko dole navedenog koda:</p>
+             <div class="kod">
+               <code>
+                 f = open('fajl.txt', 'a')<br/>
+                 f.write("Dodatak")<br/>
+                 f.close()<br/>
+               </code>
+             </div>
+          </div>
+        </div>
+        <div class="cleaner"></div>
+      </main>
+      <footer>
+        <div id="copyright">
+          <h1>Copyright &copy; Kodkademija 2019</h1>
+        </div>
+        <div id="fMeni">
+          <!-- <a href="https://www.facebook.com/aleksandar.milijanovic.71" target="_blank"><span class="fab fa-facebook-square"></span>Aleksandar Milijanović</a> -->
+           <ul>
+            <li><a href="https://www.facebook.com/aleksandar.milijanovic.71" target="_blank"><span class="fab fa-facebook-square"></span></a></li>
+            <li><a href="https://www.instagram.com/milijan_00/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+           </ul>
+        </div>
+        <div class="cleaner"></div>
+      </footer>
+  </body>
+</html>

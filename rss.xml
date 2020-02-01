@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <title>NEDELJNA AKCIJA!</title>
+      <description>Dobijate 20% popusta na kurs "Programiranje u C-u"</description>
+      <link>aaaa/login.html</link>
+    </item>
+    <item>
+      <title>NEDELJNA AKCIJA!</title>
+      <description>Dobijate 20% popusta na kurs "Programiranje u C++-u"</description>
+      <link>aaaa/login.html</link>
+    </item>
+    <item>
+      <title>NEDELJNA AKCIJA!</title>
+      <description>Dobijate 20% popusta na kurs "Programiranje u Python-u"</description>
+      <link>aaaa/login.html</link>
+    </item>
+  </channel>
+</rss>

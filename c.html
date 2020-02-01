@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="sr-Latn-RS">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Aleksandar Milijanović"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="keywords" content="kod, metoda, funkcija, naredba, promenljiva"/>
+    <meta name="description" content="Ovaj sajt namenjen je korisnicima koji žele naučiti osnove programiranja iz programskih jezika C, C++ i Python."/>
+    <meta name="copyright"  content="Kodkademija @ 2019"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="css/master.css"/>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <title>Programski jezik C - KodKademija</title>
+  </head>
+  <body>
+      <header>
+        <div id="header-fixed">
+          <div id="Logo">
+            <a href="index.html" title="Početna"><img src="img/logo3.png" alt="Logo"/></a>
+          </div>
+          <div id="meni">
+            <ul>
+              <li>
+                <span class="fas fa-home"></span>
+                <a href="index.html">Početna</a></li>
+              <li class="aktivan-link"><a href="c.html">C</a></li>
+              <li><a href="cpp.html">C++</a></li>
+              <li><a href="py.html">Python</a></li>
+              <li class="podmeniLink"><a href="#">Primeri</a>
+                <span class="fas fa-arrow-down"></span>
+                  <ul id="podmeni">
+                    <li><a  href="login.html">C</a></li>
+                    <li><a  href="login.html">C++</a></li>
+                    <li><a  href="login.html">Python</a></li>
+                  </ul>
+              </li>
+              <li><a href="registracija.html">Registracija</a></li>
+              <li>
+                <span class="fas fa-user"></span>
+                <a href="onama.html">O nama</a></li>
+              <li>
+                <span class="fas fa-phone-square"></span>
+                <a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="cleaner"></div>
+        </div>
+      </header>
+      <main id="sadrzaj">
+        <!-- <div id="login">
+        JEDAN LINK STILIZOVAN KAO TAS
+        </div> -->
+        <div id="sadrzajMeni">
+            <ul>
+              <li><a href="#opste">Opšte</a></li>
+              <li><a href="#najjednostavnijiProgram">Najjednostavniji program</a></li>
+              <li><a href="#standardniunosispis" >Standardni unos/ispis</a></li>
+              <li><a href="#komentari" >Komentari</a></li>
+              <li><a href="#tipoviPodataka" >Tipovi podataka</a></li>
+              <li><a href="#promenljive" >Promenljive</a></li>
+              <li><a href="#operatori" >Operatori</a></li>
+              <li><a href="#uslovi" >Uslovi</a></li>
+              <li><a href="#petlje" >Petlje</a></li>
+              <li><a href="#nizovi" >Nizovi</a></li>
+              <li><a href="#funkcije" >Funkcije</a></li>
+              <li><a href="#strukture" >Strukture</a></li>
+              <li><a href="#radsadatotekama" >Rad sa datotekama</a></li>
+            </ul>
+        </div>
+        <div id="sadrzajDesno">
+          <div class="oblast">
+            <h1 ><a name="opste">Opšte</a></h1>
+            <p>Programski jezik C nastao je 1972. godine.Kreirao ga se Denis Riči (Dennis Ritchie) s željom da razvije operativni sistem UNIX.C-e se koristi za razvijanje operativnih sistema.</p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="najjednostavnijiProgram">Najjednostavniji program</a></h1>
+            <p>Prilikom usvajanja novih znanja iz programskih jezika najbolje je početi od najjednostanijeg programa koji se u njemu može napisati.Na osnovu tog primera se može sagledati sintaksa jezika.
+              Kod takvog programa možete videti ispod.
+            </p>
+            <div class="kod">
+              <code>
+                #include&lt;stdio.h&gt;<br/>
+                #include &lt;stdlib.h&gt;<br/>
+
+                void main()<br/>
+                {<br/>
+                	printf("Dobar dan!");<br/>
+                }<br/>
+
+              </code>
+            </div>
+            <p>Iako na prvi pogled deluje komplikovano, kod je vrlo jednostavan.Include naredbe koriste se prilikom uključivanja nekog eksternog fajla u  root fajl projekta
+              Ta dva fajla su header fajlovi stdio.h i stdlib.h. Oni su zapravo biblioteke u kojima se nalaze brojne funkcije koje možemo koristiti u programu, koje je neko drugi napisao za nas.
+              Void se odnosi na tip glavne funkcije. O tipovima podataka će biti više reči u daljim lekcijama, za sada, je važno zapamtiti da void ne vraća nikakav rezultat.
+              Main() jeste naziv glavne funkcije nakon koga sledi lista argumenata.Glavna funkcija mora postojati u C programu jer je ona početna tačka izvršavanja koda i sav kod koji se treba izvršiti se u njoj mora nalaziti.
+              Sa { } se označava telo funkcije, odnosno sav kod koji pripada nekoj funkciji se mora nalaziti u okviru njih.
+              I na kraju imamo naredbu printf("Dobar dan!");.Ova instrukcija se koristi za prikaz sadrzaja na ekran monitora.O okviru para običnih zagrada se upisuje sadzaj, podaci, koje želimo ispisati.
+              <br/>Postoje različiti formati podataka koji se zapisuju kao argumenti ove funkcije, ali detaljnije o tome u <a href="#tipoviPodataka">TIPOVI PODATAKA</a>.
+            </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="standardniunosispis">Standardni unos/ipis</a></h1>
+            <p>
+              Standardni unos podrazumeva unos podataka preko tastature, dok ispis predstavlja prikaz podataka na ekranu monitora.Koristićemo dve metode printf(*args) i scanf(*args).
+              Primena navedenih metoda je prikazana ispod.
+            </p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt;<br/>
+                #include &lt;stdlib.h&gt;<br/>
+
+                void main()<br/>
+                {<br/>
+                	int broj;<br/>
+                	printf("Unesite ceo broj:"); // standardni ispis<br/>
+                	scanf("%d", &broj); // standardni unos<br/>
+                	printf("%d + 1 = %d", broj, broj+1);<br/>
+                }
+
+              </code>
+            </div>
+            <p>
+              U ovom primeru kod je donekle sličan onom prethodnom u lekciji <a href="#najjednostavnijiProgram">NAJJEDNOSTAVNIJI PROGRAM</a>.Međutim postoje određene novine.Ono što je novo jeste naredba "int broj;" koja označava deklaraciju promenljive, određenog memorijskog prostora sa čijim podacima možemo manipulisati.
+              O tome će više biti reči u lekciji <a href="#promenljive">PROMENLjIVE</a>.Još jedna novina jeste upotreba naredbe "scanf("%d", &broj);".Prilikom unosa podataka preko ovakve funkcije neophodno je upisati format podatka kojeg unosimo, bio on broj ili neki drugi karakter.Pošto u ovom primeru moramo uneti ceo broj samim tim kao format celog broja unosimo "%d".
+              Nakon čega sledi drugi argument, odnosno adresa memorijske lokacije gde će se naš broj nalaziti.Tu je neophodan operator & ,jer se on koristi za naznačavanje memorijske adrese.Tako da bi se "&broj" tumačilo na sledeći način.Uneti podatak memoriši na adresu memorijske lokacije broj.
+              Na kraju imamo ispis dve vrednosti, prve koja je uneta preko tastature i druga koja je povećana za jedan.Ponovo je potrebno navesti format za celi broj, pošto ceo broj ispisujemo, nakon čega sledi lista vrednosti koje se trebaju ispisati.Međusobno su odvojene zarezima.
+             </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="komentari">Komentari</a></h1>
+            <p>
+              Komentari se koriste kao posebne naznake u kodu koje su namenjene isključivo programerima.Oni nikako ne utiču na kod koliko god da ih ima, već služe kao podsetnik ili se preko njih lakše objašnjava deo koda.<br/>
+              Postoje jednoredni komentari koji se označavaju sa // i nakon njih ceo red jeste komentiran, ali ne i deo koda ispred nega.Takođe postoje i više redni komentari kod kojih se početak komentara označava sa /* , a kraj sa */.
+            </p>
+            <div class="kod">
+              <code>
+                // jednoredni komentar<br/>
+                /* viseredni<br/>
+                  komentar <br/>
+                  */
+              </code>
+            </div>
+          </div>
+          <!-- NUZNA JE DORADA  -->
+          <div class="oblast">
+            <h1 ><a name="tipoviPodataka">Tipovi podataka</a></h1>
+            <div class="centriraj tabela">
+              <table>
+                <tbody>
+                <tr>
+                  <th>Tip</th>
+                  <th>Objašnjenje</th>
+                  <th>Format</th>
+                </tr>
+                <tr>
+                  <td>char</td>
+                  <td>Podatak ovog tipa ima najmanju memoriju i predstavlja  karakter</td>
+                  <td>%c</td>
+                </tr>
+                <tr>
+                  <td>signed char</td>
+                  <td>Iste je veličine kao i char s tim što sadrži vrednosti u opsegu &lsqb;-127, +127&rsqb;</td>
+                  <td>%c</td>
+                </tr>
+                <tr>
+                  <td>unsigned char</td>
+                  <td>Iste veličine kao i char s tim što sadrži vrednosti u opsegu &lsqb;0, 255&rsqb;</td>
+                  <td>%c</td>
+                </tr>
+                <tr>
+                  <td>int</td>
+                  <td>Najjednostavniji oboznačni, celobrojni tip koji sadrži vrednosti u opsegu &lsqb;−32,767, +32,767&rsqb;</td>
+                  <td>%d ili %i</td>
+                </tr>
+                <tr>
+                  <td>unsigned int</td>
+                  <td>Najjednostavniji jednoznačni, celobrojni tip koji sadrži vrednosti u opsegu &lsqb;0, 65,535&rsqb;</td>
+                  <td>%u</td>
+                </tr>
+                <tr>
+                  <td>long int</td>
+                  <td>Duži  dvoznačni, celobrojni tip koji sadrži vrednosti u opsegu &lsqb;−2,147,483,647, +2,147,483,647&rsqb;</td>
+                  <td>%ld</td>
+                </tr>
+                <tr>
+                  <td>long unsigned  int</td>
+                  <td>Duži  jednoznačni, celobrojni tip koji sadrži vrednosti u opsegu &lsqb;0, 4,294,967,295&rsqb;</td>
+                  <td>%lu</td>
+                </tr>
+                <tr>
+                  <td>float</td>
+                  <td>Tip podatka koji predstavlja realan broj, smatra se tipom  jednostruke preciznosti</td>
+                  <td>%f</td>
+                </tr>
+                <tr>
+                  <td>double</td>
+                  <td>Takođe tip za realan broj, smatra se tipom dvostruke preciznosti  &lsqb;0, 4,294,967,295&rsqb;</td>
+                  <td>%lf</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+
+          </div>
+          <div class="oblast">
+            <h1 ><a name="promenljive">Promenljive</a></h1>
+            <p>
+              Promenljive predstavljaju ništa drugo do jednu memorijsku lokaciju u računaru u kojoj se nalaze podaci sa kojima manipulišemo shodno našim potrebama.
+              Deklaracija promenljive sa sastoji iz više koraka:
+              </p>
+              <ol>
+                <li><p>moramo navesti tip podatka kojeg će promenljiva sadržati</p></li>
+                <li><p>moramo napisati ime promenljive koje ćemo koristiti dalje u kodu</p></li>
+                <li><p>moramo napisati početnu vrednost (opcionalno)</p></li>
+              </ol>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+                void main()<br/>
+                {<br/>
+                  //tip ime = vrednost;<br/>
+                  int ceoBroj = 0;<br/>
+                  int ceoBroj2;<br/>
+                  float realanBroj = 1.0;<br/>
+                  double realanBroj2 = 1.0;<br/>
+                  char karakter = 'A';<br/>
+                  char *rec = "Aleksandar";<br/>
+                }
+              </code>
+            </div>
+            <p>Ono što je važno naglasiti jeste da promenljiva mora imati nekakvu vrednost pre nego što se koristi u kalkulacijama.Posebna oznaka char* jeste za tip podatka string koji predstavlja skup karaktera.</p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="operatori">Operatori</a></h1>
+            <div class="centriraj tabela">
+              <table>
+                <tbody>
+                <tr>
+                  <th>Tip</th>
+                  <th>Operator</th>
+                </tr>
+                <tr>
+                  <td rowspan="5">Aritmetički operatori</td>
+                  <td>+</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>*</td>
+                </tr>
+                <tr>
+                  <td>=</td>
+                </tr>
+                <tr>
+                  <td>%</td>
+                </tr>
+                <tr>
+                  <td rowspan="4">Komparacioni operatori</td>
+                  <td>&gt;</td>
+                </tr>
+                <tr>
+                  <td>=&gt;</td>
+                </tr>
+                <tr>
+                  <td>&lt;=</td>
+                </tr>
+                <tr>
+                  <td>&lt;</td>
+                </tr>
+                <tr>
+                  <td rowspan="7">Specijalni operatori</td>
+                  <td>++</td>
+                </tr>
+                <tr>
+                  <td>--</td>
+                </tr>
+                <tr>
+                  <td>+=</td>
+                </tr>
+                <tr>
+                  <td>-=</td>
+                </tr>
+                <tr>
+                  <td>*=</td>
+                </tr>
+                <tr>
+                  <td>/=</td>
+                </tr>
+                <tr>
+                  <td>%=</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="uslovi">Uslovi</a></h1>
+            <p>
+              Uslovi jesu vid dodavanja logike u naš program putem određenih uslova koje odredi programer.U C-u postoje tri ključne reči koje se koriste prilikom kreiranja uslova.
+              One su:
+              </p>
+              <ol>
+                <li><p>IF</p></li>
+                <li><p>ELSE IF</p></li>
+                <li><p>ELSE</p></li>
+              </ol>
+              <p>IF se koristi uvek za početak grananja uslova, dok se ELSE IF koristi za uslove između i ELSE se korsti za poslednji uslov s tim što se uslov ne navodi za njega.<br/>
+                Uslov ima sledeću sintaksu: &nbsp;if(uslov){telo uslova}<br/>
+                Kod unutar tela uslova se izvršava samo ukoliko je uslov tačan, ukoliko nije onda se preskače.
+              </p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+                void main() <br/>
+                { <br/>
+                	int broj; <br/>
+                	printf("Unesite ceo broj:");  <br/>
+                	scanf("%d", &broj); <br/>
+                	if(broj < 50) <br/>
+                	{ <br/>
+                		printf("Vas broj je manji od 50!"); <br/>
+                	} <br/>
+                	else if(broj < 100) <br/>
+                	{ <br/>
+                		printf("Vas broj je manji od 100!"); <br/>
+                	} <br/>
+                	else <br/>
+                	{ <br/>
+                		printf("Vas broj je veci od 100!"); <br/>
+                	} <br/>
+                }
+              </code>
+            </div>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="petlje">Petlje</a></h1>
+            <p>
+              Kroz petlje možemo jedan blok koda izvršiti nekoliko puta u zavisnosti koliko nam je potrebno.Taj broj izvršavanja ili iteracija, može biti određen od strane programera mada broj iteracija može biti različit prilikom izvršavanja jednog istog programa u zavisnosti od vrednosti unetih od strane korisnika.
+              Postoje tri vrste petlji:
+              </p>
+              <ol>
+                <li><p>While</p></li>
+                <li><p>Do while</p></li>
+                <li><p>For</p></li>
+              </ol>
+              <p>While jeste ona kod koje broj iteracija ne zavisi od vrednosti koje programer unese.Ona se kreira pisanjem ključne reči while i pisanjem uslova i tela same petlje<br/>
+                Telo uslova je ograđeno {}, između njih se nalazi kod koji se treba izvršiti nakon tačnosti uslova.Rezultat koji će biti prikazan zavisi od unete vrednosti koja se poredi.<br/>
+                  Prvo ćemo prikazati preimer sa petljom while:
+               </p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+
+                void main()<br/>
+                {<br/>
+                	unsigned broj = 0;<br/>
+                	while(broj %2 == 0)<br/>
+                	{<br/>
+                		printf("\nUnesite neparan broj:");<br/>
+                		scanf("%u", &broj);<br/>
+                	}<br/>
+                }<br/>
+              </code>
+            </div>
+            <p>Operand % naziva se modul i kao rezultat takve operacije jeste ostatak prilikom deljenja deljenika i delioca.Ova petlja nema definisan broj iteracija i samim tim taj broj zavisi od tačnosti uslova koji je definisan.
+              Od trenutka kada uslov postane netačan petlja se prekida automatski.<br/>
+              Sledi primer do while petlje:
+            </p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+
+                void main()<br/>
+                {<br/>
+                  unsigned broj = 0; <br/>
+                  printf("Unesite ceo broj:"); <br/>
+                	scanf("%u", &broj); <br/>
+                	do <br/>
+                	{ <br/>
+                		printf("broj = %u\n", broj); <br/>
+                		broj--; <br/>
+                	}while(broj > 0); <br/>
+                }<br/>
+              </code>
+            </div>
+            <p>Ovakva petlja će imati najmanje jednu iteraciju zbog toga što će se prvobitno izvršiti kod u telu same petlje i nakon toga proveriti uslov.<br/>
+              Sledi primer for petlje:
+            </p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+
+                void main()<br/>
+                {<br/>
+                  unsigned broj = 0; <br/>
+                  printf("Unesite ceo broj:");<br/>
+                	scanf("%u", &broj);<br/>
+                	for(unsigned i = 0; i < broj; i++)<br/>
+                	{<br/>
+                		printf("%u. iteracija\n", i+1);<br/>
+                	}<br/>
+                }<br/>
+              </code>
+            </div>
+            <p>For petlja nam ostavlja mogućnost da definišemo tačan broj iteracija iako taj broj i kod ove petlje može zavisiti od podataka unetih od strane korisnika.</p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="nizovi">Nizovi</a></h1>
+            <p>
+              Nizovi jesu posebna vrsta promenljivih koja sadrži dve ili više vrednosti koje se međusobno povezane tj. odnose se na isti pojam.
+              Sadrže sve tipove baš kao i obične promenljive, ali niz može sadržati vrednosti istog tipa koji je naveden u deklaraciji.
+              Deklaracija niza se svodi na sledeće:<br/>
+              tip naziv&lsqb;broj elemenata&rsqb;;<br/>
+              </p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+
+                void main()<br/>
+                {<br/>
+                	double a[5];<br/>
+                	for(unsigned i = 0; i < 5; i++)<br/>
+                	{<br/>
+                		printf("Unesite realan broj:");<br/>
+                		scanf("%lf", &a[i]);<br/>
+                	}<br/>
+                	printf("Prikaz elemenata:\n");<br/>
+                	for(unsigned i = 0; i < 5; i++)<br/>
+                	{<br/>
+                		printf("%.2lf, ", a[i]);<br/>
+                	}<br/>
+                }<br/>
+              </code>
+            </div>
+            <p>Način na koji se vrednosti unose u niz jeste preko for petlje, naravno to jeste moguće i preko ostalih mada praksa pokazuje da je ona najkorišćenija za ovakav slučaj.
+              Ono što je važno napomenuti jeste da prvi element ima index , mesto u nizu, vrednosti 0, dok poslednji ima za jedan manje od ukupnog broja elemenata u nizu. U programiranju brojanje
+              počinje od 0.Tabela ispod prikazuje indekse proizvoljnih elemenata i njihove pozicije u nizu:
+            </p>
+          <div class="centriraj tabela">
+            <table>
+              <tbody>
+              <tr>
+                <th>INDEX</th>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>...</td>
+                <td>n-1</td>
+              </tr>
+              <tr>
+                <th>POZICIJA</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>...</td>
+                <td>n</td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+          <!-- <p>n - ukupan broj elemenata u nizu</p> -->
+          </div>
+          <div class="oblast">
+            <h1 ><a name="funkcije">Funkcije</a></h1>
+            <p>
+              Funkcija jeste podprogram koji se može izvršavati onoliko puta shodno potrebama programera.Potreba za pisanjem funkcija javlja se  u trenutku kada uočavamo ponavljanje koda, jer sama funkcija jeste vid skraćivanja pisanja koda.
+              I ukoliko je potrebna rezivija koda koji se ponavlja jedino meste gde se revizija čini jeste telo funkcije.<br/>
+              Deklaracija funkcije vrši se po sledećem šablonu:<br/>
+              tip nazivFunkcije(lista argumenata){ telo funkcije};
+              </p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+                void prikaziTekst(void);//prototip funkcije <br/>
+                int vratiKvadrat(int broj){ <br/>
+                	return broj*broj; <br/>
+                } <br/>
+                void main() <br/>
+                { <br/>
+                	prikaziTekst(); <br/>
+                	printf("\n%d", vratiKvadrat(5)); <br/>
+                } <br/>
+                void prikaziTekst(void){ <br/>
+                	printf("Zdravo!"); <br/>
+                } <br/>
+              </code>
+            </div>
+            <p>U C-u postoje dva načina zapisa funkcija u zavisnosti gde se nalaze u odnosu na funkciju main.Ukoliko se zapisuju ispod glavne funkcije  nužan je prototip koji govori komplajleru da funkcija postoji u kodu.
+              Kada primeti pozivanje funkcije onda je pronađe i program se nastavlja sa izvršavanjem.Prototip se zapisuje iznad glavne funkcije koji je sličan deklaraciji s tim što se izostavlja telo.<br/>
+              Ukoliko se funkcija deklariše iznad glavne onda je prototip suvišan.<br/>
+              U listu argumenata se prosleđuju vrednosti bez kojih funkcija ne može izvršiti svoj kod.Kao što je to u našem slučaju.Neophodno je proslediti broj funkciji vratiKvadrat kako bi vratila razultat.
+              Svaka funkcija koja vraća rezultat mora imati na kraju ključnu reč return i istotipnu vrednost koju vraća.Void se piše ukoliko funkcija nema listu argumenata.
+            </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="strukture">Strukture</a></h1>
+            <p>
+              Struktura jeste nestandardizovani tip koji može sadržati druge promenljive, ali isto tako se može upotrebljavati kao bilo koji od standardizovanih tipova.
+              Ključna reč prilikom deklaracije strukture je struct nakon čega se navodi ime strukture i telo iste.
+              </p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+                typedef struct Osoba<br/>
+                {<br/>
+                	char ime[15];<br/>
+                	char prezime[15];<br/>
+                	unsigned starost;<br/>
+                }Osoba;<br/>
+                void main()<br/>
+                {<br/>
+                	Osoba osoba;<br/>
+                	printf("Unesite ime:");<br/>
+                	scanf("%s", osoba.ime);<br/>
+                	printf("Unesite prezime:");<br/>
+                	scanf("%s", osoba.prezime);<br/>
+                	printf("Unesite starost:");<br/>
+                	scanf("%u", &osoba.starost);<br/>
+                	printf("%s %s ima %u godina\n", osoba.ime, osoba.prezime, osoba.starost);<br/>
+                }<br/>
+              </code>
+            </div>
+            <p>
+              Ključna reč typedef dodata je kako bismo definisali novi tip koji možemo koristiti u pogramu.Gore navedeni program kreira  objekat osoba strukture Osoba
+              koji sadrži promenljive ime, prezime i starost.Metodama  za standardni unos i ispis sugerišemo korisniku kakve podatke treba uneti koji se naknadno prikazuju u određenom formatu.<br/>
+              Način na koji se pristupa svakoj promenljivi posebno kroz objekat strukture jeste preko " . " kao što je učinjeno iznad.
+            </p>
+          </div>
+          <div class="oblast">
+            <h1 ><a name="radsadatotekama">Rad sa datotekama</a></h1>
+            <p>
+              Datoteke jesu jedan vid trajnog čuvanja, skladištenja, podataka i u C-u postoje određene metode koje nam omogućavaju rad sa njima.
+              Metode kao što su:
+            </p>
+            <ol>
+              <li><p>fopen(*args) - uspostavlja povezanost sa datotekom, na osnovu argumenata kreira, čita ili dodaje u datoteku </p></li>
+              <li><p>fclose(*f) - zatvara datoteku na koju pokazuje f </p></li>
+              <li><p>fprintf(*args) - dodaje sadržaj u tekstualnu datoteku</p></li>
+              <li><p>fgets(*args) - čita sadržaj iz datoteke </p></li>
+            </ol>
+            <p>U zavisnosti da li želimo kreirati, čitati ili dodati sadržaj trebamo dodati kao drugi argument metode fopen :</p>
+            <ol>
+              <li><p>w - kreiranje potpuno nove datoteke</p></li>
+              <li><p>r - čitanje sadržaja datoteke</p></li>
+              <li><p>a - dodavanje sadržaja u datoteku</p></li>
+              <li><p>r+ - kreiranje i čitanje sadržaja datoteke</p></li>
+            </ol>
+            <p>Kreiranje(W) i dodavanje sadržaja u novu datoteku:</p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+                void main(void)<br/>
+                { <br/>
+                  //          adresa + naziv datoteke, operacija<br/>
+                	FILE *f = fopen("text.txt", "w");<br/>
+                	fprintf(f, "Zdravo!");<br/>
+                	fclose(f);<br/>
+                }<br/>
+
+              </code>
+            </div>
+            <p>Čitanje(r) sadržaja  datoteke:</p>
+            <div class="kod">
+              <code>
+                #include &lt;stdio.h&gt; <br/>
+                #include &lt;stdlib.h&gt;<br/>
+
+                void main(void) <br/>
+                { <br/>
+
+                	FILE *f = fopen("text.txt", "r"); <br/>
+                	char jedanRed[150]; <br/>
+                	while(!feof(f)) <br/>
+                	{ <br/>
+                		fgets(jedanRed, 150, f); <br/>
+                		puts(jedanRed); <br/>
+                	} <br/>
+                	fclose(f); <br/>
+                } <br/>
+              </code>
+            </div>
+             <p>Metoda feof(*f) vrši proveru da li je cursor stigao do kraja fajla; ukoliko jeste onda se pretlja prekida.<br/>Dodavanje(a) sadržaja u datoteku, ali ne brisati već postojeći</p>
+             <div class="kod">
+               <code>
+                 #include &lt;stdio.h&gt; <br/>
+                 #include &lt;stdlib.h&gt;<br/>
+                  void main(void)<br/>
+                  {<br/>
+                  	FILE *f = fopen("text.txt", "a");<br/>
+                  	fprintf(f, "Zdravo!");<br/>
+                  	fprintf(f, "Zdravo!");<br/>
+                  	fclose(f);<br/>
+                  }<br/>
+               </code>
+             </div>
+          </div>
+        </div>
+        <div class="cleaner"></div>
+      </main>
+      <footer>
+        <div id="copyright">
+          <h1>Copyright &copy; Kodkademija 2019</h1>
+        </div>
+        <div id="fMeni">
+          <!-- <a href="https://www.facebook.com/aleksandar.milijanovic.71" target="_blank"><span class="fab fa-facebook-square"></span>Aleksandar Milijanović</a> -->
+           <ul>
+            <li><a href="https://www.facebook.com/aleksandar.milijanovic.71" target="_blank"><span class="fab fa-facebook-square"></span></a></li>
+            <li><a href="https://www.instagram.com/milijan_00/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+           </ul>
+        </div>
+        <div class="cleaner"></div>
+      </footer>
+  </body>
+</html>
